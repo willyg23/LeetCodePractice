@@ -1,0 +1,15 @@
+
+
+    def getHeight(self,root):
+        #Write your code here
+        
+        if not root: # no tree exists
+            return -1
+        
+        if not root.left and not root.right: #at a leaf node
+            return 0
+        
+        left_height = self.getHeight(root.left)
+        right_height = self.getHeight(root.right)
+        return max(left_height,right_height) + 1
+
