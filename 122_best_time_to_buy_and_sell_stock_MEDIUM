@@ -1,0 +1,72 @@
+class Solution {
+
+    /**
+     * @param Integer[] $prices
+     * @return Integer
+     */
+    function maxProfit($prices) {
+        
+        $arrayLength = count($prices);
+        $totalProfit = 0;
+        
+        for($i = 0; $i < $arrayLength - 1; $i++){
+            
+            if($prices[$i] < $prices[$i+1]){
+                $totalProfit += $prices[$i+1] - $prices[$i];
+            }
+            
+        }
+        
+        return $totalProfit;
+
+        
+        
+        
+        
+//         $arrayLength = count($prices);
+//         $currentHighest = 0;
+//         $compareToHighest = 0;
+//         $totalTrade = 0;
+        
+//         for($i = 0; $i < $arrayLength; $i++){
+            
+//             for($j = $i + 1; $j < $arrayLength - 1; $j++){
+                
+//                 //finding the highest total trade
+//                 if($prices[$i] < $prices[$j]){
+//                     $totalTrade += $prices[$j] - $prices[$i];
+//                 }
+                
+                
+                
+//                 //finding the highest single trade
+//                 $compareToHighest = $prices[$j] - $prices[$i];
+//                 if($compareToHighest > $currentHighest){
+//                     $currentHighest = $compareToHighest;
+//                 }
+                    
+                 
+//             }
+           
+//             if($currentHighest >= $totalTrade){
+//                 return $currentHighest;
+//             }
+//             else{
+//                 return $totalTrade;
+//             }
+            
+//         }
+        
+        /*
+        ideas
+        // if 
+        
+        every time i < j
+        find the difference
+        add that difference together
+        
+        */
+        
+        
+    }
+}
