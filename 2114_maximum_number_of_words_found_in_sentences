@@ -1,0 +1,45 @@
+// 2114. Maximum Number of Words Found in Sentences
+
+class Solution {
+    public int mostWordsFound(String[] sentences) {
+
+
+        int totalWordsBest = 0;
+
+        for(int i = 0; i < sentences.length; i++){
+
+            totalWordsBest = Math.max(totalWordsBest,sentences[i].split(" ").length);
+
+        }
+
+        return totalWordsBest;
+
+
+
+
+
+
+
+
+
+
+        // int totalWordsCurrent = 0;
+        // int totalWordsBest = 0;
+
+
+        // for(int i = 0; i < sentences.length; i++){
+        //     for(int j = 0; j < sentences[i].length(); j++){
+        //         if(sentences[i].charAt(j) == ' '){
+        //             totalWordsCurrent++;
+        //         }
+        //     }
+        //     totalWordsCurrent++;
+        //     if(totalWordsCurrent > totalWordsBest){
+        //         totalWordsBest = totalWordsCurrent;
+        //     }
+        //     totalWordsCurrent = 0;
+        // }
+
+        // return totalWordsBest;
+    }
+}
