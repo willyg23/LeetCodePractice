@@ -1,0 +1,26 @@
+class Solution {
+    public boolean checkRecord(String s) {
+        int abscences = 0;
+        int latesInRow = 0;
+        for(int i = 0; i < s.length(); i++){
+            if(s.charAt(i) == 'A'){
+                abscences++;
+                latesInRow =0;
+                if(abscences >= 2){
+                return false;
+                }
+            }
+            
+            else if(s.charAt(i) == 'L'){
+                latesInRow++;
+                if(latesInRow >= 3){
+                return false;
+                }
+            }
+            else{
+                latesInRow = 0;
+            }
+        }
+        return true;
+    }
+}
